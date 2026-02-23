@@ -1,5 +1,5 @@
 import pytest
-from src.account import AccountManager
+from backend.app.account import AccountManager
 
 @pytest.fixture
 def account():

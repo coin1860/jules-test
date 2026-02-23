@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import MagicMock, patch
 import pandas as pd
-from src.market_data import YFinanceProvider
+from backend.app.market_data import YFinanceProvider
 
 @pytest.fixture
 def provider():

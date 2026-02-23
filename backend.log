@@ -1,0 +1,35 @@
+INFO:     Started server process [6695]
+INFO:     Waiting for application startup.
+INFO:API:Initializing Trading Engine...
+INFO:API:Engine Initialized
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:35526 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35528 - "GET /history HTTP/1.1" 200 OK
+INFO:backend.app.engine:Engine Loop Started for CNY=X
+INFO:backend.app.engine:Trading Engine Started
+INFO:     127.0.0.1:35528 - "POST /start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35528 - "GET /status HTTP/1.1" 200 OK
+INFO:backend.app.engine:Price: 6.903200149536133, Signal: HOLD
+INFO:     127.0.0.1:35528 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35526 - "GET /history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35526 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35528 - "GET /history HTTP/1.1" 200 OK
+INFO:backend.app.engine:Price: 6.903200149536133, Signal: HOLD
+INFO:     127.0.0.1:35526 - "GET /history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35528 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35526 - "GET /history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35528 - "GET /status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35526 - "GET /history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35528 - "GET /status HTTP/1.1" 200 OK
+INFO:backend.app.engine:Price: 6.903200149536133, Signal: HOLD
+INFO:backend.app.engine:Price: 6.903200149536133, Signal: HOLD
+INFO:backend.app.engine:Price: 6.903200149536133, Signal: HOLD
+INFO:backend.app.engine:Price: 6.903200149536133, Signal: HOLD
+INFO:backend.app.engine:Price: 6.903200149536133, Signal: HOLD
+INFO:backend.app.engine:Price: 6.903200149536133, Signal: HOLD
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:backend.app.engine:Trading Engine Stopping...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6695]
