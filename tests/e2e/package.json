@@ -1,0 +1,11 @@
+{
+  "name": "usd-cny-quant-poc-e2e",
+  "version": "1.0.0",
+  "description": "E2E tests for USD-CNY Quant POC Frontend",
+  "scripts": {
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
