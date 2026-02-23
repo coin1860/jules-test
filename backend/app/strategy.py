@@ -3,6 +3,10 @@ import pandas as pd
 
 class StrategyModule:
     def __init__(self, short_window: int = 5, long_window: int = 20):
+        self.update_parameters(short_window, long_window)
+        self.prices: List[float] = []
+
+    def update_parameters(self, short_window: int, long_window: int):
         if short_window <= 0 or long_window <= 0:
             raise ValueError("Windows must be positive")
         if short_window >= long_window:
@@ -10,7 +14,6 @@ class StrategyModule:
 
         self.short_window = short_window
         self.long_window = long_window
-        self.prices: List[float] = []
 
     def on_tick(self, price: float) -> str:
         """
@@ -21,16 +24,18 @@ class StrategyModule:
 
         self.prices.append(price)
 
+        # Optimization: Limit the size of prices list to avoid memory leak
+        # Keep a buffer, e.g., 2 * long_window
+        max_len = self.long_window * 5
+        if len(self.prices) > max_len:
+            self.prices = self.prices[-max_len:]
+
         # Need enough data for the long window
         if len(self.prices) < self.long_window:
             return "HOLD"
 
         # Calculate SMAs
         # We need at least long_window + 1 data points to detect a crossover
-        # (current and previous)
-        # But wait, if we just arrived at long_window, we have 1 point of SMA.
-        # To detect crossover, we compare SMA(t) and SMA(t-1).
-
         if len(self.prices) < self.long_window + 1:
              return "HOLD"
 
