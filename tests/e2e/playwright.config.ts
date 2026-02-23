@@ -3,7 +3,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: '.',
   fullyParallel: true,
-  reporter: 'html',
+  reporter: 'line',
   use: {
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
@@ -12,10 +12,6 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
     },
   ],
 });

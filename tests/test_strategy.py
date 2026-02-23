@@ -1,5 +1,5 @@
 import pytest
-from src.strategy import StrategyModule
+from backend.app.strategy import StrategyModule
 
 def test_initialization():
     strategy = StrategyModule(short_window=5, long_window=20)

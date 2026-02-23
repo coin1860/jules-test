@@ -5,3 +5,4 @@ __pycache__/
 venv/
 env/
 trading.log
+node_modules/
